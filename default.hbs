@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{{!-- Document Settings --}}
+	    <meta charset="utf-8" />
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	    {{!-- Page Meta --}}
+	    <title>{{meta_title}}</title>
+	    <meta name="description" content="{{meta_description}}" />
+
+	    {{!-- Mobile Meta --}}
+	    <meta name="HandheldFriendly" content="True" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	    {{!-- Brand icon --}}
+	    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+	    {{!-- Styles'n'Scripts --}}
+   	 	<link rel="stylesheet" type="text/css" href="{{asset "css/default.css"}}" />
+    	<link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}" />
+    	{{ghost_head}}
+	</head>
+	<body>
+		<div class="left-col">
+			<div class="blog-avatar">
+			<!-- 默认图片 -->
+				<a href="{{@blog.url}}"><img src="{{#if @blog.logo}}{{@blog.logo}}{{else}}http://ghost.dreambelieve.me/content/images/2016/12/03.TV---Fate-stay-night-ED--------.mkv_snapshot_00.56_-2013.05.28_02.26.29-.png{{/if}}" ></a>
+			</div>
+			<div class="blog-title">
+				<a href="{{@blog.url}}">{{@blog.title}}</a>
+			</div>
+			<div class="blog-description">
+				<p>{{@blog.description}}</p>
+			</div>
+			<div class="navigation">
+				{{navigation}}
+			</div>
+			<div class="link">
+				<a href="https://github.com/rabbit-deer-you" target="_blank"><div class="icon github"></div></a>
+				<a href="http://weibo.com/2113404973/" target="_blank"><div class="icon weibo"></div></a>
+				<a href="https://twitter.com/rabbit_deer_you" target="_blank"><div class="icon twitter"></div></a>
+				
+			</div>
+		</div>
+		<div class="right-col">
+			{{{body}}}
+			<footer class="footer">
+				©&nbsp;2017&nbsp;-&nbsp;DreamBelieve  &nbsp;&nbsp;&nbsp;  Powered by <a href="https://ghost.org/">Ghost</a> & <a href="https://github.com/rabbit-deer-you">noname</a>
+			</footer>
+		</div>
+		{{ghost_footer}}
+		<script></script>
+	</body>
+</html>
